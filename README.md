@@ -13,8 +13,10 @@ For the longest time, my language-of-choice was C, but I am now moving over to
 Haskell and Java to follow my research interests without the various burdens of
 a language designed for the PDP-11.
 
-If you would like to contact me, please use
-[my University e-mail address](mailto:od641@york.ac.uk).
+If you would like to contact me, please use [my University e-mail
+address](mailto:od641@york.ac.uk). I also maintain [a collection of GitHub
+Gists](https://gist.github.com/oliverdixon), some of which may be occasionally
+useful.
 
 (La)TeX is a mess. I'm going to rewrite it one day.
 
