@@ -1,8 +1,12 @@
 #!/bin/bash
 # OWD 2023
 
+# Generate an HTML tree from the current working directory and prepare it for
+# publication on the York user web instance.
+
 SED_SUB="<head>"
-SED_REP="<head>\n <link rel=\"stylesheet\" href=\"tree.css\">"
+SED_REP="<head>\n <link rel=\"stylesheet\" href=\"tree.css\">\
+  \n <base target=\"_parent\" \/>"
 
 WEB_PATH="$HOME/web"
 OUT_NAME="$WEB_PATH/tree/tree.html"
