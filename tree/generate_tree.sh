@@ -16,6 +16,7 @@ OUT_NAME="$WEB_PATH/tree/tree.html"
 
 echo "Writing an HTML tree of $PWD into $OUT_NAME"
 
-tree "$PWD" -H https://www-users.york.ac.uk/~"$(whoami)$URL_SUFFIX" | \
+tree "$PWD" -I secret \
+    -H https://www-users.york.ac.uk/~"$(whoami)$URL_SUFFIX" | \
     sed '0,/'"$SED_SUB"'/s//'"$SED_REP"'/' > "$OUT_NAME"
 
