@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!-- OWD, 2023 -->
+<html lang="en">
+    <head>
+        <title>Oliver Dixon's Personal Home Page</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <style>
+            .box {
+                border: 1px solid black;
+                padding: 10px;
+                margin-bottom: 10px;
+                height: 100%;
+            }
+
+            .box#lead {
+                display: grid;
+                grid-template-columns: 200px auto;
+                column-gap: 10px;
+                align-items: center;
+            }
+
+            .box#lead img    { width: 100%;         }
+            .box#lead h1, h2 { margin: 0px;         }
+            .box#lead h2     { font-weight: normal; }
+
+            .box iframe {
+                width: 100%;
+                border: 0px;
+                height: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td id="lead" class="box">
+                    <img src="img/headshot.jpg" />
+                    <div>
+                        <h1>Oliver Dixon</h1>
+                        <h2>CS/Maths Undergraduate Student</h2>
+                        <hr />
+                        I am a second-year undergraduate reading the
+                        <a href="https://www.york.ac.uk/study/undergraduate/courses/mmath-mathematics-computer-science-year-industry/">
+                            MMath Honours Mathematics and Computer Science with
+                            a Year in Industry</a> course at the University of
+                        York.  Much of my recent work, coupled with a more
+                        comprehensive discussion of my academic interests, can
+                        be found on
+                        <a href="https://www.github.com/oliverdixon">my GitHub
+                            profile</a>. If you would like to contact me, please
+                        send e-mail to my University address:
+                        <a href="mailto:od641@york.ac.uk">od641@york.ac.uk</a>.
+                    </div>
+                </td>
+            </tr>
+            <tr style="height: 400px;">
+                <td class="box">
+                    <iframe src="./tree/tree.html"></iframe>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>
+

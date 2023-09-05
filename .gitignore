@@ -1,0 +1,13 @@
+*
+
+!.gitignore
+!tree
+!tree/.*
+
+!*.html
+!*.css
+!*.md
+!*.sh
+
+old.html
+
