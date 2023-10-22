@@ -4,9 +4,8 @@
 # Generate an HTML tree from the current working directory and prepare it for
 # publication on the York user web instance.
 
-SED_SUB="<head>"
-SED_REP="<head>\n <link rel=\"stylesheet\" href=\"tree.css\">\
-  \n <base target=\"_parent\" \/>"
+SED_COMMAND='/<style type=\"text\/css\">$/,/<\/style>$/d;
+    s/<head>/ <link rel=\"stylesheet\" type=\"text\/css\" href=\"tree.css\">\n <base target=\"_parent\" rel=\"noopener noreferrer\">/'
 
 WEB_PATH="$HOME/web"
 OUT_NAME="$WEB_PATH/tree/tree.html"
@@ -18,5 +17,5 @@ echo "Writing an HTML tree of $PWD into $OUT_NAME"
 
 tree "$PWD" -I secret \
     -H https://www-users.york.ac.uk/~"$(whoami)$URL_SUFFIX" | \
-    sed '0,/'"$SED_SUB"'/s//'"$SED_REP"'/' > "$OUT_NAME"
+    sed "$SED_COMMAND" > "$OUT_NAME"
 

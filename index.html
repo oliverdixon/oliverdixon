@@ -5,28 +5,40 @@
         <title>Oliver Dixon's Personal Home Page</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <style>
-            .box {
-                border: 1px solid black;
+            .grid-container {
+                display: grid;
+                gap: 10px;
                 padding: 10px;
-                margin-bottom: 10px;
-                height: 100%;
+                grid-template-columns: 25% auto;
             }
 
-            .box#lead {
+            .grid-container > div {
+                border: 1px solid black;
+                padding: 10px;
+            }
+
+            .grid-container > .fullwidth {
+                grid-column: span 2;
+            }
+
+            .grid-container > #header {
                 display: grid;
                 grid-template-columns: 200px auto;
-                column-gap: 10px;
+                column-gap: 15px;
                 align-items: center;
             }
 
-            .box#lead img    { width: 100%;         }
-            .box#lead h1, h2 { margin: 0px;         }
-            .box#lead h2     { font-weight: normal; }
+            .grid-container > #header > img { width: 100%; }
+            .grid-container > #header h1 { margin: 0px; }
+            .grid-container > #header h2 {
+                margin: 0px;
+                font-weight: normal;
+            }
 
-            .box iframe {
+            .grid-container > .halfwidth > iframe {
+                height: 600px;
                 width: 100%;
                 border: 0px;
-                height: 100%;
             }
         </style>
         <script type="text/javascript">
@@ -43,34 +55,41 @@
         </script>
     </head>
     <body>
-        <div id="lead" class="box">
-            <img src="img/headshot.jpg" />
-            <div>
-                <h1>Oliver Dixon</h1>
-                <h2>CS/Maths Undergraduate Student</h2>
-                <hr />
-                I am a second-year undergraduate reading the
-                <a href="https://www.york.ac.uk/study/undergraduate/courses/mmath-mathematics-computer-science-year-industry/">
-                    MMath Honours Mathematics and Computer Science with
-                    a Year in Industry</a> course at the University of
-                York.  Much of my recent work, coupled with a more
-                comprehensive discussion of my academic interests, can
-                be found on
-                <a href="https://www.github.com/oliverdixon">my GitHub
-                    profile</a>. If you would like to contact me, please
-                send e-mail to my University address:
-                <a href="mailto:od641@york.ac.uk">od641@york.ac.uk</a>. This
-                website is unlikely to contain anything of general use or
-                particular interest and is typically used as a generic
-                repository to host large non-versioned files that I would like
-                to make available to others.
+        <div class="grid-container">
+            <div id="header" class="fullwidth">
+                <img src="img/headshot.jpg" />
+                <div>
+                    <h1>Oliver Dixon</h1>
+                    <h2>CS/Maths Undergraduate Student</h2>
+                    <hr />
+                    I am a second-year undergraduate reading the
+                    <a href="https://www.york.ac.uk/study/undergraduate/courses/mmath-mathematics-computer-science-year-industry/">
+                        MMath Honours Mathematics and Computer Science with
+                        a Year in Industry</a> course at the University of York.
+                    Much of my recent work, coupled with a more comprehensive
+                    discussion of my academic interests, can be found on
+                    <a href="https://www.github.com/oliverdixon">my GitHub
+                        profile</a>. If you would like to contact me, please
+                    send e-mail to my University address: <a
+                        href="mailto:od641@york.ac.uk">od641@york.ac.uk</a>.
+                    This website is unlikely to contain anything of general use
+                    or particular interest and is typically used as a generic
+                    repository to host large non-versioned files that I would
+                    like to make available to others.
+                </div>
             </div>
-        </div>
-        <div class="box" style="height: 400px;">
-            <iframe src="./tree/tree.html"></iframe>
-        </div>
-        <div class="box">
-            This document was last modified: <span id="lmdate">unknown</span>.
+            <div class="halfwidth">
+                <iframe src="./tree/tree.html"></iframe>
+            </div>
+            <div class="halfwidth">
+                <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=2&bgcolor=%23ffffff&ctz=Europe%2FLondon&mode=WEEK&hl=en_GB&title=University%20of%20York%20-%20Academic%20Timetable%20-%20Oliver%20Dixon%20(od641%40york.ac.uk)&src=a2hzbWVtMnE5Zzl2Y202MTEzZDJhcjkzOHF2YXEya3FAaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23D81B60"
+                    frameborder="0" scrolling="no">
+                </iframe>
+            </div>
+            <div id="footer" class="fullwidth">
+                This document was last modified: <span id="lmdate"><noscript>unknown
+                    (no JavaScript support)</noscript></span>.
+            </div>
         </div>
     </body>
 </html>
