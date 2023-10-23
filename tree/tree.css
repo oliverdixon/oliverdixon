@@ -1,27 +1,27 @@
 body {
     font-family: monospace;
-    margin: 0px;
+    margin: 0;
     white-space: nowrap;
-    font-size: large;
 }
 
 h1 {
-    margin: 0px;
+    margin: 0;
     font-family: serif;
-    font-size: 1.5em;
+    font-size: x-large;
     padding-bottom: 10px;
+    border-bottom: 1px solid black;
 }
 
+p {
+    margin: 0;
+    padding-top: 10px;
+    font-size: large;
+}
+
+a { margin: 0; }
 a:hover {
     text-decoration: underline;
     background-color: yellow;
-    margin: 0px;
-    padding: 0px;
-}
-
-a:active {
-    margin: 0px;
-    padding: 0px;
 }
 
 hr {
@@ -31,14 +31,16 @@ hr {
 .VERSION {
     font-size: small;
     font-family: sans-serif;
+    margin-top: 10px;
+    border-top: 1px solid black;
 }
 
-.NORM  { color: black;  }
-.FIFO  { color: purple; }
-.CHAR  { color: yellow; }
-.DIR   { color: blue;   }
-.BLOCK { color: yellow; }
-.LINK  { color: aqua;   }
-.SOCK  { color: fuchsia;}
-.EXEC  { color: green;  }
+.NORM  { color: black;   }
+.FIFO  { color: purple;  }
+.CHAR  { color: yellow;  }
+.DIR   { color: blue;    }
+.BLOCK { color: yellow;  }
+.LINK  { color: aqua;    }
+.SOCK  { color: fuchsia; }
+.EXEC  { color: green;   }
 

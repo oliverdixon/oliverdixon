@@ -10,9 +10,8 @@
     padding: 10px;
 }
 
-.grid-container > div > iframe {
+.grid-container > div iframe {
     width: 100%;
-    height: 100%;
     border: 0px;
 }
 
@@ -32,9 +31,27 @@
 }
 
 .grid-container > #tree { grid-row: 2 / span 2; }
+.grid-container > #tree > iframe { height: 100%; }
+
 .grid-container > #calendar {
     grid-column: 2;
+    display: flex;
+    flex-direction: column;
     height: 600px;
+}
+
+.grid-container > #calendar > iframe {
+    width: 100%;
+    border: 0px;
+    flex-grow: 1;
+}
+
+.grid-container > #calendar > h1 {
+    margin: 0;
+    font-size: x-large;
+    padding-bottom: 10px;
+    border-bottom: 1px solid black;
+    margin-bottom: 10px;
 }
 
 .grid-container > #calendar-note { grid-column: 2; }
