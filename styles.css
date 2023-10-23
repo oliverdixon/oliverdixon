@@ -3,6 +3,11 @@
 
 /* --- Begin generic styles --- */
 
+div iframe {
+    width: 100%;
+    border: 0;
+}
+
 /* .table-container: prepare the direct children of a block to appear
  * side-by-side. Use .table-right-box for italic right-aligned tips. */
 
@@ -15,11 +20,6 @@
 .table-container > .table-right-box {
     text-align: right;
     font-style: oblique;
-}
-
-div iframe {
-    width: 100%;
-    border: 0;
 }
 
 /* .grid-container: the outermost element of the body, creating a two-column
@@ -46,11 +46,7 @@ div iframe {
     flex-direction: column;
 }
 
-.grid-container > .body-section > iframe {
-    width: 100%;
-    border: 0;
-    flex-grow: 1;
-}
+.grid-container > .body-section > .body-grow { flex-grow: 1; }
 
 /* .grid-container > .body-section > .title-container: create a title bounding
  * box for a single grid body element. The title should be contained within an
@@ -86,7 +82,6 @@ div iframe {
 }
 
 .grid-container > #tree { grid-row: 2 / span 2; }
-.grid-container > #tree > iframe { height: 100%; }
 
 .grid-container > #calendar {
     grid-column: 2;
