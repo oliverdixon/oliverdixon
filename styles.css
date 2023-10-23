@@ -1,3 +1,30 @@
+/* Master styling specification - OWD, 2023
+ * https://www-users.york.ac.uk/~od641 */
+
+/* --- Begin generic styles --- */
+
+/* .table-container: prepare the direct children of a block to appear
+ * side-by-side. Use .table-right-box for italic right-aligned tips. */
+
+.table-container { display: table; }
+.table-container > * {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.table-container > .table-right-box {
+    text-align: right;
+    font-style: oblique;
+}
+
+div iframe {
+    width: 100%;
+    border: 0;
+}
+
+/* .grid-container: the outermost element of the body, creating a two-column
+ * layout with a width-spanning header and footer. */
+
 .grid-container {
     display: grid;
     gap: 10px;
@@ -10,10 +37,9 @@
     padding: 10px;
 }
 
-.grid-container > div iframe {
-    width: 100%;
-    border: 0px;
-}
+/* .grid-container > .body-section: create a non-special grid element whose
+ * principal content - likely an iframe - should scale to the height of the
+ * bounding box. */
 
 .grid-container > .body-section {
     display: flex;
@@ -22,30 +48,40 @@
 
 .grid-container > .body-section > iframe {
     width: 100%;
-    border: 0px;
+    border: 0;
     flex-grow: 1;
 }
 
-.grid-container > .body-section > h1 {
-    margin: 0;
-    font-size: x-large;
+/* .grid-container > .body-section > .title-container: create a title bounding
+ * box for a single grid body element. The title should be contained within an
+ * H3 tag. */
+
+.grid-container > .body-section > .title-container {
     padding-bottom: 10px;
     border-bottom: 1px solid black;
     margin-bottom: 10px;
+    overflow: clip;
 }
+
+.grid-container > .body-section > .title-container > h3 {
+    margin: 0;
+    font-size: x-large;
+}
+
+/* --- End generic styles      --- */
+/* --- Begin single-use styles --- */
 
 .grid-container > #header { grid-column: span 2; }
-.grid-container > #header {
-    display: grid;
-    grid-template-columns: 200px auto;
-    column-gap: 15px;
-    align-items: center;
+.grid-container > #header > img {
+    width: 200px;
+    box-shadow: 5px 5px gray;
+    border: 1px solid black;
+    margin-right: 30px;
 }
 
-.grid-container > #header > img { width: 100%; }
-.grid-container > #header h1 { margin: 0px; }
+.grid-container > #header h1 { margin: 0; }
 .grid-container > #header h2 {
-    margin: 0px;
+    margin: 0;
     font-weight: normal;
 }
 
@@ -58,25 +94,17 @@
 }
 
 .grid-container > #calendar-note { grid-column: 2; }
-
-.grid-container > #last-updated {
-    grid-column: span 2;
-    display: table;
-}
-
-.grid-container > #last-updated > #subtle-text {
-    font-size: small;
-    display: table-cell;
-    vertical-align: middle;
-    text-align: right;
-}
+.grid-container > #last-updated { grid-column: span 2; }
 
 .grid-container > #last-updated > #subtle-text > a {
     text-decoration: none;
     color: gray;
+    font-size: small;
 }
 
 .grid-container > #last-updated > #subtle-text > a:hover {
     text-decoration: underline;
 }
+
+/* --- End single-use styles --- */
 

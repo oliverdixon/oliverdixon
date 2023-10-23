@@ -20,7 +20,7 @@
     </head>
     <body>
         <div class="grid-container">
-            <div id="header">
+            <div id="header" class="table-container">
                 <img alt="My face" src="img/headshot.jpg">
                 <div>
                     <h1>Oliver Dixon</h1>
@@ -46,29 +46,40 @@
                 </div>
             </div>
             <div id="tree" class="body-section">
-                <h1>Directory Structure</h1>
+                <div class="title-container">
+                    <h3>Web Directory Tree</h3>
+                </div>
                 <iframe src="./tree/tree.html"></iframe>
             </div>
             <div id="calendar" class="body-section">
-                <h1>Public Academic Timetable</h1>
+                <div class="title-container table-container">
+                    <h3>Public Academic Timetable</h3>
+                    <span class="table-right-box">
+                        If you would like to meet with me, please send an e-mail
+                        and I will schedule an appointment.
+                    </span>
+                </div>
                 <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=2&bgcolor=%23ffffff&ctz=Europe%2FLondon&showTabs=1&showCalendars=0&hl=en_GB&showTitle=0&mode=WEEK&src=a2hzbWVtMnE5Zzl2Y202MTEzZDJhcjkzOHF2YXEya3FAaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23D81B60">
                 </iframe>
             </div>
             <div id="calendar-note"> 
-                <b>Note:</b> Google-authenticated University of York users can view my
+                <b>Note:</b> Google-authenticated University of York users can
+                view my
                 <a href="https://calendar.google.com/calendar/embed?src=od641%40york.ac.uk&ctz=Europe%2FLondon">
                     personal academic calendar</a>.
             </div>
-            <div id="last-updated">
-                This web-site was last updated on <span id="lmdate">
-                    ... <noscript>unknown (no JavaScript support)</noscript>
-                </span> by <i>OWD</i>. But, is
-                <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fwww-users.york.ac.uk%2F%7Eod641%2F">
-                    the markup valid?</a>
-                What about
-                <a href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fwww-users.york.ac.uk%2F%7Eod641%2Fstyles.css&profile=css3&usermedium=all&warning=1&vextwarning=&lang=en">
-                    the styling?</a>
-                <span id="subtle-text">
+            <div id="last-updated" class="table-container">
+                <span>
+                    This web-site was last updated on <span id="lmdate">
+                        ... <noscript>unknown (no JavaScript support)</noscript>
+                    </span> by <i>OWD</i>. But, is
+                    <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fwww-users.york.ac.uk%2F%7Eod641%2F">
+                        the markup valid?</a>
+                    What about
+                    <a href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fwww-users.york.ac.uk%2F%7Eod641%2Fstyles.css&profile=css3&usermedium=all&warning=1&vextwarning=&lang=en">
+                        the styling?</a>
+                </span>
+                <span id="subtle-text" class="table-right-box">
                     <a href="https://en.wikipedia.org/wiki/The_Colonel_(Monty_Python)">
                         Get on with it!</a>
                 </span>
