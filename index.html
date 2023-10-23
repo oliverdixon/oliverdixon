@@ -4,43 +4,7 @@
     <head>
         <title>Oliver Dixon's Personal Home Page</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <style>
-            .grid-container {
-                display: grid;
-                gap: 10px;
-                padding: 10px;
-                grid-template-columns: 25% auto;
-            }
-
-            .grid-container > div {
-                border: 1px solid black;
-                padding: 10px;
-            }
-
-            .grid-container > .fullwidth {
-                grid-column: span 2;
-            }
-
-            .grid-container > #header {
-                display: grid;
-                grid-template-columns: 200px auto;
-                column-gap: 15px;
-                align-items: center;
-            }
-
-            .grid-container > #header > img { width: 100%; }
-            .grid-container > #header h1 { margin: 0px; }
-            .grid-container > #header h2 {
-                margin: 0px;
-                font-weight: normal;
-            }
-
-            .grid-container > .halfwidth > iframe {
-                height: 600px;
-                width: 100%;
-                border: 0px;
-            }
-        </style>
+        <link rel="stylesheet" type="text/css" href="styles.css">
         <script>
             window.onload = function () {
                 document.getElementById("lmdate").innerHTML =
@@ -56,7 +20,7 @@
     </head>
     <body>
         <div class="grid-container">
-            <div id="header" class="fullwidth">
+            <div id="header">
                 <img alt="My face" src="img/headshot.jpg">
                 <div>
                     <h1>Oliver Dixon</h1>
@@ -75,19 +39,33 @@
                     This website is unlikely to contain anything of general use
                     or particular interest and is typically used as a generic
                     repository to host large non-versioned files that I would
-                    like to make available to others.
+                    like to make available to others. I have included my
+                    public (non-exhaustive) academic timetable and a
+                    periodically generated directory structure listing for
+                    your convenience. 
                 </div>
             </div>
-            <div class="halfwidth">
+            <div id="tree"> 
                 <iframe src="./tree/tree.html"></iframe>
             </div>
-            <div class="halfwidth">
-                <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=2&bgcolor=%23ffffff&ctz=Europe%2FLondon&mode=WEEK&hl=en_GB&title=University%20of%20York%20-%20Academic%20Timetable%20-%20Oliver%20Dixon%20(od641%40york.ac.uk)&src=a2hzbWVtMnE5Zzl2Y202MTEzZDJhcjkzOHF2YXEya3FAaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23D81B60">
+            <div id="calendar">
+                <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=2&bgcolor=%23ffffff&ctz=Europe%2FLondon&title=Public%20Academic%20Timetable%20-%20Oliver%20Dixon%20(od641%40york.ac.uk)&showTabs=1&showCalendars=0&hl=en_GB&mode=WEEK&src=a2hzbWVtMnE5Zzl2Y202MTEzZDJhcjkzOHF2YXEya3FAaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23D81B60">
                 </iframe>
             </div>
-            <div id="footer" class="fullwidth">
-                This document was last modified: <span id="lmdate"><noscript>unknown
-                    (no JavaScript support)</noscript></span>.
+            <div id="calendar-note"> 
+                <b>Note:</b> authenticated University of York users can view my
+                <a href="https://calendar.google.com/calendar/embed?src=od641%40york.ac.uk&ctz=Europe%2FLondon">
+                    personal academic calendar</a>.
+            </div>
+            <div id="last-updated">
+                This web-site was last updated on <span id="lmdate">
+                    ... <noscript>unknown (no JavaScript support)</noscript>
+                </span> by <i>OWD</i>. But,
+                <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fwww-users.york.ac.uk%2F%7Eod641%2F">
+                    is it valid?</a>
+                <span id="subtle-text"><a
+                    href="https://en.wikipedia.org/wiki/The_Colonel_(Monty_Python)">
+                        Get on with it!</a></span>
             </div>
         </div>
     </body>
