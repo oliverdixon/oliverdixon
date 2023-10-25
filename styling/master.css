@@ -87,7 +87,7 @@ h3 { font-size: x-large; }
 /* --- End generic styles      --- */
 /* --- Begin single-use styles --- */
 
-.grid-container div:first-of-type, .grid-container div:last-of-type {
+.grid-container > div:first-of-type, .grid-container > div:last-of-type {
     /* The first and last block elements within the grid container should
      * certainly span the entire two-column layout. These can be interpreted as
      * a header and a footer, respectively. */
@@ -96,27 +96,27 @@ h3 { font-size: x-large; }
 
 /* --- Begin two-image header styles --- */
 
-.grid-container div:first-of-type { text-align: justify; }
-.grid-container div:first-of-type > img {
+.grid-container > div:first-of-type { text-align: justify; }
+.grid-container > div:first-of-type > img {
     width: 200px;
     border: 1px solid black;
 }
 
-.grid-container div:first-of-type > img:first-of-type {
+.grid-container > div:first-of-type > img:first-of-type {
     box-shadow: 5px 5px gray;
     margin-right: 30px;
 }
 
-.grid-container div:first-of-type > img:first-of-type:hover {
+.grid-container > div:first-of-type > img:first-of-type:hover {
     box-shadow: 5px 5px black;
 }
 
-.grid-container div:first-of-type > img:last-of-type {
+.grid-container > div:first-of-type > img:last-of-type {
     box-shadow: -5px 5px gray;
     margin-left: 30px;
 }
 
-.grid-container div:first-of-type > img:last-of-type:hover {
+.grid-container > div:first-of-type > img:last-of-type:hover {
     box-shadow: -5px 5px black;
 }
 
@@ -136,7 +136,7 @@ h3 { font-size: x-large; }
 /* --- End main body grid container styles --- */
 /* --- Begin footer styles                 --- */
 
-.grid-container div:last-of-type > #subtle-text > a {
+.grid-container > div:last-of-type > #subtle-text > a {
     color: gray;
     font-size: small;
 }
