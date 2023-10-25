@@ -4,7 +4,8 @@
     <head>
         <title>Oliver Dixon's Personal Home Page</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <link rel="stylesheet" type="text/css" href="styles.css">
+        <link rel="stylesheet" type="text/css" href="styling/master.css">
+        <link rel="stylesheet" type="text/css" href="styling/no-placement.css">
         <script>
             window.onload = function () {
                 document.getElementById("lmdate").innerHTML =
@@ -20,18 +21,35 @@
     </head>
     <body>
         <div class="grid-container">
-            <div id="header" class="table-container">
+            <div class="table-container">
                 <img alt="My face" src="img/headshot.jpg">
                 <div>
-                    <h1>Oliver Dixon</h1>
-                    <h2>CS/Maths Undergraduate Student</h2>
+                    <div class="table-container">
+                        <div>
+                            <h1>Oliver Dixon</h1>
+                            <h2>CS/Maths Undergraduate Student</h2>
+                        </div>
+                        <div class="table-right-box link-box">
+                            <a href="https://www.york.ac.uk/">University of
+                                York Home-Page</a>
+                            <br>
+                            <a href="https://www.york.ac.uk/maths/">Department
+                                of Mathematics</a>
+                            <br>
+                            <a href="https://www.cs.york.ac.uk/">Department of
+                                Computer Science</a>
+                        </div>
+                    </div>
                     <hr>
                     I am a second-year undergraduate reading the
                     <a href="https://www.york.ac.uk/study/undergraduate/courses/mmath-mathematics-computer-science-year-industry/">
                         MMath Honours Mathematics and Computer Science with
-                        a Year in Industry</a> course at the University of York.
-                    Much of my recent work, coupled with a more comprehensive
-                    discussion of my academic interests, can be found on
+                        a Year in Industry</a>
+                    <span class="tooltip" title="a.k.a. The Ebor Tripos!">
+                        integrated master's degree course</span> at the
+                    University of York.  Much of my recent work, coupled with a
+                    more comprehensive discussion of my academic interests, can
+                    be found on
                     <a href="https://www.github.com/oliverdixon">my GitHub
                         profile</a>. If you would like to contact me, please
                     send e-mail to my University address: <a
@@ -44,14 +62,19 @@
                     periodically generated directory structure listing for
                     your convenience. 
                 </div>
+                <img alt="Baby Maia" src="img/hotel.jpg">
             </div>
-            <div id="tree" class="body-section">
+            <div id="placement-banner">
+                July 2024 to July 2025: On Placement at Thales Underwater
+                Systems, Ltd. in Stockport, Manchester
+            </div>
+            <div id="tree" class="frame-section">
                 <div class="title-container">
                     <h3>Web Directory Tree</h3>
                 </div>
                 <iframe class="body-grow" src="./tree/tree.html"></iframe>
             </div>
-            <div id="calendar" class="body-section">
+            <div id="calendar" class="frame-section">
                 <div class="title-container table-container">
                     <h3>Public Academic Timetable</h3>
                     <span class="table-right-box">
@@ -63,14 +86,14 @@
                     src="https://calendar.google.com/calendar/embed?height=600&wkst=2&bgcolor=%23ffffff&ctz=Europe%2FLondon&showTabs=1&showCalendars=0&hl=en_GB&showTitle=0&mode=WEEK&src=a2hzbWVtMnE5Zzl2Y202MTEzZDJhcjkzOHF2YXEya3FAaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23D81B60">
                 </iframe>
             </div>
-            <div id="calendar-note"> 
+            <div id="calendar-note">
                 <b>Note:</b> Google-authenticated University of York users can
                 view my
                 <a href="https://calendar.google.com/calendar/embed?src=od641%40york.ac.uk&ctz=Europe%2FLondon">
                     personal academic calendar</a>.
             </div>
-            <div id="last-updated" class="table-container">
-                <span>
+            <div class="table-container">
+                <p>
                     This web-site was last updated on <span id="lmdate">
                         ... <noscript>unknown (no JavaScript support)</noscript>
                     </span> by <i>OWD</i>. But, is
@@ -79,11 +102,15 @@
                     What about
                     <a href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fwww-users.york.ac.uk%2F%7Eod641%2Fstyles.css&profile=css3&usermedium=all&warning=1&vextwarning=&lang=en">
                         the styling?</a>
-                </span>
-                <span id="subtle-text" class="table-right-box">
+                    <br>
+                    The content on this web-site is, unless otherwise stated,
+                    copyright "All Rights Reserved" to Oliver W. Dixon from the
+                    date of initial publication to the present.
+                </p>
+                <p id="subtle-text" class="table-right-box link-box">
                     <a href="https://en.wikipedia.org/wiki/The_Colonel_(Monty_Python)">
                         Get on with it!</a>
-                </span>
+                </p>
             </div>
         </div>
     </body>

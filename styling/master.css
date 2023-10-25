@@ -1,0 +1,146 @@
+/* Master styling specification - OWD, 2023
+ * https://www-users.york.ac.uk/~od641 */
+
+/* --- Begin generic styles --- */
+
+body { background-color: white; }
+
+div iframe {
+    width: 100%;
+    border: 0;
+}
+
+h1, h2, h3 { margin: 0; }
+h2 { font-weight: normal; }
+h3 { font-size: x-large; }
+
+.tooltip { border-bottom: 1px dotted black; cursor: help; }
+
+/* .link-box: use when stacking hyperlinks in a vertical arrangement, or for
+ * individual links that appear without surrounding elements. */
+
+.link-box { line-height: 3ch; }
+.link-box > a {
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+}
+
+/* .table-container: prepare the direct children of a block to appear
+ * side-by-side. Use .table-right-box for italic right-aligned tips. */
+
+.table-container { display: table; }
+.table-container > * {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.table-container > .table-right-box {
+    text-align: right;
+    font-style: oblique;
+}
+
+.table-container > .table-right-box > a { text-decoration: none; }
+.table-container > .table-right-box > a:hover { font-style: normal; }
+
+/* .table-container .table-container: force nested table containers, which are
+ * themselves table cells, to push elements rightwards correctly. */
+
+.table-container .table-container { width: 100%; }
+
+/* .grid-container: the outermost element of the body, creating a two-column
+ * layout with a width-spanning header and footer. */
+
+.grid-container {
+    display: grid;
+    gap: 10px;
+    padding: 10px;
+    grid-template-columns: 25% auto;
+}
+
+.grid-container > div {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+/* .grid-container > .frame-section: create a non-special grid element whose
+ * principal content - likely an iframe - should scale to the height of the
+ * bounding box. */
+
+.grid-container > .frame-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.grid-container > .frame-section > .body-grow { flex-grow: 1; }
+
+/* .grid-container > .frame-section > .title-container: create a title bounding
+ * box for a single grid body element. The title should be contained within an
+ * H3 tag. */
+
+.grid-container > .frame-section > .title-container {
+    padding-bottom: 10px;
+    border-bottom: 1px solid black;
+    margin-bottom: 10px;
+    overflow: clip;
+}
+
+/* --- End generic styles      --- */
+/* --- Begin single-use styles --- */
+
+.grid-container > div:first-of-type, .grid-container > div:last-of-type {
+    /* The first and last block elements within the grid container should
+     * certainly span the entire two-column layout. These can be interpreted as
+     * a header and a footer, respectively. */
+    grid-column: span 2;
+}
+
+/* --- Begin two-image header styles --- */
+
+.grid-container div:first-of-type { text-align: justify; }
+.grid-container div:first-of-type > img {
+    width: 200px;
+    border: 1px solid black;
+}
+
+.grid-container div:first-of-type > img:first-of-type {
+    box-shadow: 5px 5px gray;
+    margin-right: 30px;
+}
+
+.grid-container div:first-of-type > img:first-of-type:hover {
+    box-shadow: 5px 5px black;
+}
+
+.grid-container div:first-of-type > img:last-of-type {
+    box-shadow: -5px 5px gray;
+    margin-left: 30px;
+}
+
+.grid-container div:first-of-type > img:last-of-type:hover {
+    box-shadow: -5px 5px black;
+}
+
+/* --- End two-image header styles           --- */
+/* --- Begin main body grid container styles --- */
+
+/* NOTE: The tree styling is dependent on the presence of the placement banner.
+ * This file should be co-loaded with 'placement.css' or 'no-placement.css'. */
+
+.grid-container > #calendar {
+    grid-column: 2;
+    height: 600px;
+}
+
+.grid-container > #calendar-note { grid-column: 2; }
+
+/* --- End main body grid container styles --- */
+/* --- Begin footer styles                 --- */
+
+.grid-container div:last-of-type > #subtle-text > a {
+    color: gray;
+    font-size: small;
+}
+
+/* --- End footer styles     --- */
+/* --- End single-use styles --- */
+

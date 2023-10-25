@@ -1,8 +1,8 @@
 *
 
 !.gitignore
-!tree
-!tree/.*
+!tree/
+!styling/
 
 !*.html
 !*.css
