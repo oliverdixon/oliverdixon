@@ -19,10 +19,12 @@ h3 { font-size: x-large; }
 /* .link-box: use when stacking hyperlinks in a vertical arrangement, or for
  * individual links that appear without surrounding elements. */
 
-.link-box { line-height: 3ch; }
-.link-box > a {
-    border-top: 1px solid gray;
-    border-bottom: 1px solid gray;
+.link-box > a { border-top: 1px solid gray; }
+.link-box > a:last-of-type { border-bottom: 1px solid gray; }
+
+.subtle-text {
+    color: gray;
+    font-size: small;
 }
 
 /* .table-container: prepare the direct children of a block to appear
@@ -62,6 +64,14 @@ h3 { font-size: x-large; }
     padding: 10px;
 }
 
+.grid-container > div p {
+    text-align: justify;
+
+    /* The ancestral (not necessarily parental) grid container div provides
+     * some padding; do not duplicate the spacing here. */
+    margin: 0;
+}
+
 /* .grid-container > .frame-section: create a non-special grid element whose
  * principal content - likely an iframe - should scale to the height of the
  * bounding box. */
@@ -87,16 +97,17 @@ h3 { font-size: x-large; }
 /* --- End generic styles      --- */
 /* --- Begin single-use styles --- */
 
-.grid-container > div:first-of-type, .grid-container > div:last-of-type {
+.grid-container > div:first-of-type, .grid-container > div:last-of-type,
+        .grid-container > .gridspan-box {
     /* The first and last block elements within the grid container should
      * certainly span the entire two-column layout. These can be interpreted as
-     * a header and a footer, respectively. */
+     * a header and a footer, respectively. Additional width-spanning boxes can
+     * be specified with the gridspan-box class. */
     grid-column: span 2;
 }
 
 /* --- Begin two-image header styles --- */
 
-.grid-container > div:first-of-type { text-align: justify; }
 .grid-container > div:first-of-type > img {
     width: 200px;
     border: 1px solid black;
@@ -134,13 +145,5 @@ h3 { font-size: x-large; }
 .grid-container > #calendar-note { grid-column: 2; }
 
 /* --- End main body grid container styles --- */
-/* --- Begin footer styles                 --- */
-
-.grid-container > div:last-of-type > #subtle-text > a {
-    color: gray;
-    font-size: small;
-}
-
-/* --- End footer styles     --- */
-/* --- End single-use styles --- */
+/* --- End single-use styles               --- */
 
