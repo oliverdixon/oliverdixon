@@ -1,4 +1,4 @@
-#placement-banner {
+.grid-container > #placement-banner {
     background-color: black;
     font-size: xx-large;
     text-transform: uppercase;
@@ -6,6 +6,7 @@
     color: yellow;
     padding: 5px;
     text-align: center;
+    display: block;
 }
 
 .grid-container > #tree { grid-row: 2 / span 3; }

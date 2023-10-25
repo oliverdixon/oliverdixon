@@ -123,8 +123,8 @@ h3 { font-size: x-large; }
 /* --- End two-image header styles           --- */
 /* --- Begin main body grid container styles --- */
 
-/* NOTE: The tree styling is dependent on the presence of the placement banner.
- * This file should be co-loaded with 'placement.css' or 'no-placement.css'. */
+.grid-container > #placement-banner { display: none; }
+.grid-container > #tree { grid-row: 2 / span 2; }
 
 .grid-container > #calendar {
     grid-column: 2;
