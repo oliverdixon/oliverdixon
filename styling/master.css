@@ -87,7 +87,7 @@ h3 { font-size: x-large; }
 /* --- End generic styles      --- */
 /* --- Begin single-use styles --- */
 
-.grid-container > div:first-of-type, .grid-container > div:last-of-type {
+.grid-container div:first-of-type, .grid-container div:last-of-type {
     /* The first and last block elements within the grid container should
      * certainly span the entire two-column layout. These can be interpreted as
      * a header and a footer, respectively. */
