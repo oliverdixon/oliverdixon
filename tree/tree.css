@@ -1,3 +1,6 @@
+/* Directory tree styling specification - OWD, 2023
+ * https://www-users.york.ac.uk/~od641/tree/tree.html */
+
 body {
     margin: 0;
     white-space: nowrap;
@@ -9,11 +12,7 @@ p {
     font-family: monospace;
 }
 
-a:hover {
-    text-decoration: underline;
-    background-color: yellow;
-}
-
+a:hover { background-color: yellow; }
 h1, hr { display: none; }
 
 .VERSION {

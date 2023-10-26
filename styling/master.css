@@ -14,7 +14,10 @@ h1, h2, h3 { margin: 0; }
 h2 { font-weight: normal; }
 h3 { font-size: x-large; }
 
-.tooltip { border-bottom: 1px dotted black; cursor: help; }
+.tooltip {
+    border-bottom: 1px dotted black;
+    cursor: help;
+}
 
 /* .link-box: use when stacking hyperlinks in a vertical arrangement, or for
  * individual links that appear without surrounding elements. */
