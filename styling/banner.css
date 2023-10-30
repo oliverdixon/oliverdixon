@@ -1,7 +1,7 @@
-/* Placement banner styling modifications - OWD, 2023
+/* Calendar banner styling modifications - OWD, 2023
  * https://www-users.york.ac.uk/~od641 */
 
-.grid-container > #placement-banner {
+.grid-container > #calendar-banner {
     background-color: black;
     font-size: xx-large;
     text-transform: uppercase;
