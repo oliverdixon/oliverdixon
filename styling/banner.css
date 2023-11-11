@@ -15,5 +15,5 @@
 /* We're essentially adding another row to the implicit grid. We need to
  * override the tree styling to span the newly expanded height. */
 
-.grid-container > #tree { grid-row: 2 / span 3; }
+.grid-container > #tree { grid-row: 2 / span 4; }
 

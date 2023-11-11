@@ -138,14 +138,14 @@ h3 { font-size: x-large; }
 /* --- Begin main body grid container styles --- */
 
 .grid-container > #calendar-banner { display: none; }
-.grid-container > #tree { grid-row: 2 / span 2; }
+.grid-container > #tree { grid-row: 2 / span 3; }
 
 .grid-container > #calendar {
     grid-column: 2;
     height: 600px;
 }
 
-.grid-container > #calendar-note { grid-column: 2; }
+.grid-container > .calendar-note { grid-column: 2; }
 
 /* --- End main body grid container styles --- */
 /* --- End single-use styles               --- */
