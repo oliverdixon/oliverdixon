@@ -4,10 +4,7 @@
     <head>
         <title>Oliver Dixon's Personal Home Page</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <link rel="stylesheet" type="text/css" href="styling/master.css">
-        <!--<link rel="stylesheet" type="text/css"
-            href="styling/desktop.css">-->
-        <link rel="stylesheet" type="text/css" href="styling/banner.css">
+        <link rel="stylesheet" type="text/css" href="styling.css">
         <script>
             window.onload = function () {
                 document.getElementById("lmdate").innerHTML =
@@ -64,17 +61,13 @@
                 </div>
                 <img alt="Baby Maia" src="img/hotel.jpg">
             </div>
-            <div id="calendar-banner">
-                Empty calendar: teaching suspended from Friday, 15th December to
-                Monday, 12th February
-            </div>
-            <div id="tree" class="frame-section">
+            <div id="tree" class="iframe-section">
                 <div class="title-container">
                     <h3>Web Directory Tree</h3>
                 </div>
-                <iframe class="body-grow" src="./tree/tree.html"></iframe>
+                <iframe src="./tree/tree.html"></iframe>
             </div>
-            <div id="calendar" class="frame-section">
+            <div id="calendar" class="iframe-section">
                 <div class="title-container table-container">
                     <h3>Public Academic Timetable</h3>
                     <span class="table-right-box">
@@ -82,13 +75,30 @@
                         and I will schedule an appointment.
                     </span>
                 </div>
-                <iframe class="body-grow"
+                <iframe
                     src="https://calendar.google.com/calendar/embed?height=600&wkst=2&bgcolor=%23ffffff&ctz=Europe%2FLondon&showTabs=1&showCalendars=0&hl=en_GB&showTitle=0&mode=WEEK&src=Z2VpcDFhZG1lcDN0MDhhbHI0MThpbm1vNTVkZ2t0anZAaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23D81B60">
                 </iframe>
             </div>
-            <div class="calendar-note">
-                <b>Note:</b> Google-authenticated University of York users
-                can view my
+            <div id="additional-notices">
+                <div class="title-container">
+                    <h3>Additional Notices</h3>
+                </div>
+                <ul>
+                    <li>Empty calendar: teaching suspended from Friday, 15th
+                        December to Monday, 12th February</li>
+                    <li>Early February: away in the United States from Friday
+                        2nd to Tuesday 6th</li>
+                    <li>Mid-to-late February: away in France; exact dates
+                        TBC</li>
+                    <li>Advance notice: on placement at [a multinational defence
+                        contractor] from July 2024 to September 2025</li>
+                </ul>
+            </div>
+            <div id="calendar-note">
+                <div class="title-container">
+                    <h3>University of York Members Notice</h3>
+                </div>
+                Google-authenticated University of York users can view my
                 <a href="https://calendar.google.com/calendar/embed?src=od641%40york.ac.uk&ctz=Europe%2FLondon">
                     personal academic calendar</a>. This contains
                 commitments that are not assigned by the central Timetabling

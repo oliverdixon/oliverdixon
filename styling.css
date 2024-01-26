@@ -1,4 +1,6 @@
-/* Master styling specification - OWD, 2023
+/* Master styling specification
+ * OWD, 2023--2024
+ *
  * https://www-users.york.ac.uk/~od641 */
 
 /* --- Begin generic styles --- */
@@ -75,22 +77,21 @@ h3 { font-size: x-large; }
     margin: 0;
 }
 
-/* .grid-container > .frame-section: create a non-special grid element whose
+/* .grid-container > .iframe-section: create a non-special grid element whose
  * principal content - likely an iframe - should scale to the height of the
  * bounding box. */
 
-.grid-container > .frame-section {
+.grid-container > .iframe-section {
     display: flex;
     flex-direction: column;
 }
 
-.grid-container > .frame-section > .body-grow { flex-grow: 1; }
+.grid-container > .iframe-section > iframe { flex-grow: 1; }
 
-/* .grid-container > .frame-section > .title-container: create a title bounding
- * box for a single grid body element. The title should be contained within an
- * H3 tag. */
+/* .grid-container .title-container: create a title bounding box for a single
+ * grid body element. The title should be contained within an H3 tag. */
 
-.grid-container > .frame-section > .title-container {
+.grid-container .title-container {
     padding-bottom: 10px;
     border-bottom: 1px solid black;
     margin-bottom: 10px;
@@ -106,7 +107,7 @@ h3 { font-size: x-large; }
      * certainly span the entire two-column layout. These can be interpreted as
      * a header and a footer, respectively. Additional width-spanning boxes can
      * be specified with the gridspan-box class. */
-    grid-column: span 2;
+    grid-column: span 3;
 }
 
 /* --- Begin two-image header styles --- */
@@ -137,15 +138,23 @@ h3 { font-size: x-large; }
 /* --- End two-image header styles           --- */
 /* --- Begin main body grid container styles --- */
 
-.grid-container > #calendar-banner { display: none; }
 .grid-container > #tree { grid-row: 2 / span 2; }
 
 .grid-container > #calendar {
-    grid-column: 2;
+    grid-column: 2 / span 2;
     height: 600px;
 }
 
-.grid-container > .calendar-note { grid-column: 2; }
+.grid-container > #calendar-note {
+    grid-column: 2;
+    grid-row: 3;
+}
+
+.grid-container > #additional-notices { grid-column: 3; }
+.grid-container > #additional-notices > ul {
+    margin-top: .5ex;
+    margin-bottom: .5ex;
+}
 
 /* --- End main body grid container styles --- */
 /* --- End single-use styles               --- */
