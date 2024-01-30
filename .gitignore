@@ -1,18 +1,16 @@
+# This is very awkward!
+
 *
 
+!*.*
 !.gitignore
+!**/.htaccess
 
-# This is very awkward!
+*.pdf
+
 !tree/
 !styling/
 !signature/
 
-!*.html
-!*.css
-!*.md
-!*.sh
-
-old.html
-secret
 tree/tree.html
 
