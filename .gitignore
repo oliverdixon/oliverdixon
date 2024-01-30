@@ -1,8 +1,11 @@
 *
 
 !.gitignore
+
+# This is very awkward!
 !tree/
 !styling/
+!signature/
 
 !*.html
 !*.css
