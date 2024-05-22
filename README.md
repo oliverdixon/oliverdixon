@@ -1,10 +1,12 @@
-I am an undergraduate student at The University of York, currently reading
-Mathematics and Computer Science on a joint honours programme. I am principally
-interested in Analysis, particularly of the nonstandard variety, and Category
-Theory with applications to lambda calculus and generalised functional
-paradigms. The latter provides a perfect intersection between the pure sciences
-and computing, and most recently I have been developing interests in parsers,
-compilers, and optimisation.
+I am an undergraduate student at the University of York, currently reading the
+Computer Systems (Computer Science) MEng programme. I am principally interested
+in Theoretical Computer Science, particularly Category Theory with
+[applications](https://arxiv.org/abs/2209.01259) to lambda calculus and
+generalised functional paradigms. Recently I have been developing interests in
+parsers, compilers, and optimisation, and I also maintain a (substantial) hobby
+of studying disparate areas of Pure Mathematics from [Homotopy Type
+Theory](https://arxiv.org/abs/2212.11082) to [Non-Standard
+Analysis](https://mathworld.wolfram.com/NonstandardAnalysis.html).
 
 I have been programming for a while, and my contributions exist in many (likely
 disjoint) corners of the web under differing e-mail addresses and public keys,

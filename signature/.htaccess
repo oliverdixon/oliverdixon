@@ -1,5 +1,0 @@
-<IfModule mod_headers.c>
-    # Allow the embedding of content into iframes on York user domains
-    Header edit X-Frame-Options "DENY" "SAMEORIGIN"
-</IfModule>
-
